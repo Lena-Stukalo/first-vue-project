@@ -18,6 +18,9 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/user-event": "^14.6.1",
+    "@testing-library/vue": "^8.1.0",
     "@vitejs/plugin-vue": "^6.0.4",
     "@vitest/eslint-plugin": "^1.6.9",
     "@vue/test-utils": "^2.4.6",
