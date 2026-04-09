@@ -15,5 +15,10 @@ export default defineConfig({
   test: {
     globals: true,
     setupFiles: ['./tests/setUp.js'],
+    coverage: {
+      provider: 'v8',
+      reporter: ['text'],
+      include: ['src/**/*.{js,vue}'],
+    },
   },
 })

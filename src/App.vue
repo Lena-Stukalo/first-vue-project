@@ -3,7 +3,7 @@
   <MainNav></MainNav>
 </template>
 <script>
-import MainNav from './components/MainNav/MainNav.vue'
+import MainNav from './components/MainNav.vue'
 export default {
   name: 'App',
   components: {
