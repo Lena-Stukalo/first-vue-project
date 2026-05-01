@@ -1,23 +1,29 @@
 <template>
-  <button
-    class="hover:shadow-blue rounded border-0 bg-brand-blue-1 px-5 py-3 font-medium text-white"
-    @click="handelClick"
-  >
+  <button :class="buttonClasseByType" @click="handleclick">
     {{ text }}
   </button>
 </template>
 <script>
 export default {
   name: 'ActiveButton',
-  data() {
-    return {
-      text: 'Sign In',
-    }
-  },
-  methods: {
-    handelClick() {
-      console.log('button was clicked')
+  props: ['text', 'typeOfButton', 'handleclick'],
+  computed: {
+    buttonClasseByType() {
+      return {
+        [this.typeOfButton]: true,
+      }
     },
   },
 }
 </script>
+<style scoped>
+button {
+  @apply rounded px-5 py-3 font-medium;
+}
+.primary {
+  @apply border-0 bg-brand-blue-1 text-white hover:shadow-blue;
+}
+.secondary {
+  @apply hover:bg-brand-blue-2 bg-transparent text-brand-blue-1 hover:text-white;
+}
+</style>

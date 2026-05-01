@@ -13,13 +13,19 @@
           </ul>
         </nav>
         <div class="ml-auto flex h-full items-center">
-          <ActionButton v-if="!isLoggedIn" />
-          <ProfileImage v-else />
+          <ActionButton
+            v-if="!isLoggedIn"
+            text="Sign In"
+            type-of-button="primary"
+            :handleclick="toggleUserLoggInStatus"
+          />
+          <ProfileImage v-else @click="toggleUserLoggInStatus" />
         </div>
       </div>
     </div>
   </header>
 </template>
+
 <script>
 import ActionButton from './ActionButton.vue'
 import ProfileImage from './ProfileImage.vue'
@@ -36,6 +42,11 @@ export default {
       navigationPages: ['Teams', 'Locations', 'Life at PetVue', 'How we hire', 'Sudents', 'Jobs'],
       isLoggedIn: false,
     }
+  },
+  methods: {
+    toggleUserLoggInStatus() {
+      this.isLoggedIn = !this.isLoggedIn
+    },
   },
 }
 </script>

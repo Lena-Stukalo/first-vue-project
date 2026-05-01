@@ -1,5 +1,9 @@
 <template>
-  <img :src="urlImage" alt="profile Image" class="h-8 w-8 rounded-3xl object-contain" />
+  <img
+    :src="urlImage"
+    alt="User profile Image"
+    class="h-8 w-8 cursor-pointer rounded-3xl object-contain"
+  />
 </template>
 <script>
 export default {
