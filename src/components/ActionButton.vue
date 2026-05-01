@@ -18,7 +18,7 @@ export default {
 </script>
 <style scoped>
 button {
-  @apply rounded px-5 py-3 font-medium;
+  @apply cursor-pointer rounded px-5 py-3 font-medium;
 }
 .primary {
   @apply border-0 bg-brand-blue-1 text-white hover:shadow-blue;
